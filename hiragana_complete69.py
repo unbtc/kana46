@@ -4,9 +4,7 @@ eng=["abandon","ability","able","about","above","absent","absorb","abstract","ab
 kana = list('あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんがぎぐげござじずぜぞだでどばびぶべぼぱぴぷぺぽ')
 base=len(kana)
 bip39=len(eng)
-rand=list(range(bip39))
-random.shuffle(rand)
 
 for i in range(base):    
-    for j in range(base): 
-      print(kana[i]+kana[j]+" "+eng[rand[(i*base+j)%bip39]])
+    for j in range(base):
+      print(kana[i]+kana[j]+" "+eng[random.randint(0,bip39-1)])
