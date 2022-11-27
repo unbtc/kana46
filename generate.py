@@ -7,5 +7,5 @@ for i in range(base):
     for j in range(base): 
       while(i*base+j<bip39):
         dec=format(i*base+j+1, '04') 
-        print(dec+":"+kana[i]+kana[j]+":"+eng[i*base+j])
+        print(kana[i]+kana[j]+" "+eng[i*base+j])
         break
